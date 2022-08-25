@@ -25,9 +25,28 @@
 		<class>org.openmrs.module.biologicalexam.extension.html.AdminList</class>
 	</extension>
 
+	<extension>
+		<point>org.openmrs.gutter.tools</point>
+		<class>org.openmrs.module.biologicalexam.extension.html.BiologicalExamGutterLink
+		</class>
+	</extension>
+
 	<aware_of_modules>
 		<aware_of_module>org.openmrs.module.legacyui</aware_of_module>
+		<aware_of_module>org.openmrs.module.webservices.rest</aware_of_module>
 	</aware_of_modules>
+
+	<require_modules>
+
+		<require_module version="2.26">
+			org.openmrs.module.webservices.rest
+		</require_module>
+
+		<require_module version="1.8.1">
+			org.openmrs.module.legacyui
+		</require_module>
+
+	</require_modules>
 	
 	
 	<!-- AOP
